@@ -469,14 +469,14 @@ a:hover {
 		<dt>{$langues[$langue]['versm']}</dt>
 		<dd>${mysqlVersion} &nbsp;</dd>
 	</dl>
-	<h2>Braintribe {$langues[$langue]['titrePage']}</h2>
+	<h2>{$langues[$langue]['titrePage']}</h2>
 	<ul class="tools">
 		<li><a href="?phpinfo=1">phpinfo()</a></li>
 		<li><a href="phpmyadmin/">phpmyadmin</a></li>
 	</ul>
 	<h2>jQuery Playground</h2>
 	<ul class="tools">
-		<li><a href="jquery/helloWorldJQuery.html">hello world</a></li>
+		<li><a href="jquery/index.html">Go to Spielplatz</a></li>
 	</ul>
 	<h2>{$langues[$langue]['txtProjet']}</h2>
 	<ul class="projects">

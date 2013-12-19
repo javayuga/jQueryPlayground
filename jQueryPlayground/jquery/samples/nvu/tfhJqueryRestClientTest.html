@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Testing the Tribefire Host JQuery REST Client API Test</title>
+</head>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/modernizr-latest.js"> </script>
+<script type="text/javascript" src="js/jquery.indexeddb.js">  </script>
+
+<script type="text/javascript" src="js/tfhJqueryRestClient.js"> </script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$("#entityLoads").hide();
+	
+	$("#version").html($.tfhConstants.version);
+	$("#baseUrl").html($.tfhConstants.baseUrl);
+	
+	retrieveSessionId();
+
+});
+ 
+</script>
+
+<body>
+<h1>Tribefire Host JQuery Rest Client API</h1>
+<br/>
+<p>version : <span id="version"> </span> </p>
+<p>baseUrl : <span id="baseUrl"> </span> </p>
+<p>sessionId : <span id="sessionId">please wait....</span> </p>
+<p>selectedVorgang key : <span id="selectedVorgangKey">none....</span> </p>
+<br/>
+
+<div id="entityLoads">
+<p>Vergang : <span id="countVorgang">please wait....</span> </p>
+
+<br/>
+<table id="tableVorgang">
+	<tbody>
+	<tr><td>please wait for Vergang data...</td></tr>
+	</tbody>
+</table>
+
+<br/>
+<table id="tableDokumentum">
+	<tbody>
+	<tr><td>please wait for Dokumentum data...</td></tr>
+	</tbody>
+</table>
+
+<br/>
+<table id="tableVersandeinheit">
+	<tbody>
+	<tr><td>please wait for Versandeinheit data...</td></tr>
+	</tbody>
+</table>
+
+</div>
+
+</body>
+</html>
