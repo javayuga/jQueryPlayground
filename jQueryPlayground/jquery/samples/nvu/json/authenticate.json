@@ -1,0 +1,39 @@
+{
+
+    "_id": "0",
+    "_type": "com.braintribe.model.webauth.Session",
+    "profile": {
+        "_type": "map",
+        "value": [
+            {
+                "key": "Fullname",
+                "value": "C. Cortex"
+            },
+            {
+                "key": "Fullname2",
+                "value": "Cortex, C."
+            },
+            {
+                "key": "Surname",
+                "value": "Cortex"
+            },
+            {
+                "key": "lang",
+                "value": "default"
+            },
+            {
+                "key": "Given name",
+                "value": "C."
+            }
+        ]
+    },
+    "roles": {
+        "_type": "set",
+        "value": [
+            "admin"
+        ]
+    },
+    "sessionId": "131219155220881e009a32f0db811bc3",
+    "user": "cortex"
+
+}

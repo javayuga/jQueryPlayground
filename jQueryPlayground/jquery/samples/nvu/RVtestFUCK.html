@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="sex, 22 nov 2013 22:03:28 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	
+	<link rel="stylesheet" href="./pictures/font-awesome-4.0.3/css/font-awesome.min.css">
+    
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./js/modernizr-latest.js"> </script>
+<script type="text/javascript" src="./js/jquery.indexeddb.js">  </script>
+
+<script type="text/javascript" src="./js/tfhJqueryRestClient.js"> </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#entityLoads").hide();
+	
+	$("#version").html($.tfhConstants.version);
+	$("#baseUrl").html($.tfhConstants.baseUrl);
+	
+	retrieveSessionId();
+
+});
+ 
+	
+</script>
+    <style type="text/css">
+	
+	
+	  #tableVorgang{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	font-size: 12px;
+	margin: 45px;
+	width: 1100px;
+	text-align: center;
+	position:fixed;
+	left:150px;
+	top:74px;
+	border-spacing:0;
+   }
+   
+   #tableVorgang thead th.vorgangHeader
+{
+	
+	background:rgb(53,148,203);
+	border-top-left-radius:10px;
+}
+#tableVorgang thead th.rounded-q5
+{
+	
+	background:rgb(53,148,203);
+	border-top-right-radius:10px;
+}
+#tableVorgang th
+{
+	padding:8px;
+	font-weight: normal;
+	font-size: 13px;
+	color: white;
+	background:rgb(53,148,203);
+	border:1px solid gray;
+}
+#tableVorgang td
+{
+	padding:4px;
+	height:19px;
+	background: white;
+	border:1px solid gray;
+	font-size:12px;
+	color: black;
+}
+#rounded-left-foot
+{
+	border-bottom-left-radius:10px;
+}
+#rounded-right-foot
+{
+	border-bottom-right-radius:10px;
+}
+
+
+#tableVorgang tbody tr:hover td
+{
+	background:lightgray;
+}
+   
+   #tableDokumentum{
+   font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	font-size: 12px;
+	margin: 45px;
+	width: 1100px;
+	text-align: center;
+	border-spacing:0;
+	position:fixed;
+	left:150px;
+	top:310px;
+    }
+	
+.document-q1
+{
+	background: rgb(0,153,255);
+	border-top-left-radius:10px;
+}
+.document-q6
+{
+	background: rgb(0,153,255);
+	border-top-right-radius:10px;
+}
+#tableDokumentum th
+{
+	padding: 8px;
+	font-weight: normal;
+	height:12px;
+	font-size: 13px;
+	color: white;
+	background:rgb(53,148,203);
+	border:1px solid gray;
+}
+#tableDokumentum td
+{
+	padding: 4px;
+	height:19px;
+	border:1px solid gray;
+	font-size:12px;
+	text-align:center;
+	color: black;
+	background:white;
+}
+#document-td-one
+{
+	border-bottom-left-radius:10px;
+}
+#document-td-six
+{
+	border-bottom-right-radius:10px;
+}
+
+
+#tableDokumentum tbody tr:hover td
+{
+	background:lightgray;
+}
+	
+	#tableVersandeinheit{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	border-spacing:0;
+	font-size: 12px;
+	margin: 45px;
+	width: 1100px;
+	text-align: center;
+	position:fixed;
+	left:150px;
+	top:501px;	
+	
+	 }
+	 
+	 .process-q1
+{
+	background: rgb(0,153,255);
+	border-top-left-radius:10px;
+}
+.process-q6
+{
+	background: rgb(0,153,255);
+	border-top-right-radius:10px;
+}
+#tableVersandeinheit th
+{
+	padding: 8px;
+	font-weight: normal;
+	height:12px;
+	font-size: 13px;
+	color: white;
+	background:rgb(53,148,203);
+	border:1px solid gray;
+}
+#tableVersandeinheit td
+{
+	padding: 4px;
+	height:19px;
+	border:1px solid gray;
+	font-size:12px;
+	text-align:center;
+	backgroud:white;
+	color: black;
+}
+#process-td-one
+{
+	border-bottom-left-radius:10px;
+}
+#process-td-six
+{
+	border-bottom-right-radius:10px;
+}
+
+
+#tableVersandeinheit tbody tr:hover td
+{
+	background:lightgray;
+}
+	
+	#logo {
+	
+	position:fixed;
+	left:15px;
+	top:10px;
+	
+	 }
+	 
+	 #left-div{
+	 background:rgb(108,191,238);
+	 width:70px;
+	 height:1200px;
+	 position:fixed;
+	 right:0%;
+	 top:0px;
+	  }
+	 
+	 #small-left-div{
+	 background:rgb(53,148,203);
+	 width:70px;
+	 height:70px;
+	 position:fixed;
+	 right:0%;
+	 top:0%;
+	  }
+	 
+	 #x-button{
+	 width:40px;
+	 height:40px;
+	 border-radius:25px;
+	 border:7px solid rgb(108,191,238);
+	 text-align:center;
+	 font-size:32px;
+	 font-family:"Arial";
+	 color:rgb(108,191,238);
+	 position:relative;
+	 left:7px;
+	 top:7px;
+	  }
+	  
+
+	  #monitor{
+	  position:fixed;
+	  left:190px;
+	  top:50px;
+	   }
+	   
+	  #mail{
+	  position:fixed;
+	  left:190px;
+	  top:286px;
+	   }
+	   
+	  #globe{
+	  position:fixed;
+	  left:190px;
+	  top:475px;
+	   }
+	   
+	  #minor-div-one{
+	  height:80px;
+	  width:5px;
+	  background:rgb(175,220,248);
+	  position:fixed;
+	  left:221px;
+	  top:230px;
+	   }
+	   
+	  #minor-div-two{
+	  height:90px;
+	  width:5px;
+	  background:rgb(175,220,248);
+	  position:fixed;
+	  left:220px;
+	  top:390px;
+	   }
+	   
+	  #minor-div-three{
+	  height:80px;
+	  width:5px;
+	  background:rgb(175,220,248);
+	  position:fixed;
+	  left:220px;
+	  top:-20px;
+	   }
+	   
+	  #monitor-label{
+	  position:fixed;
+	  font-size:30px;
+	  color:rgb(108,191,238);
+	  left:260px;
+	  top:64px;
+	   }
+	   
+	  #mail-label{
+	  position:fixed;
+	  font-size:30px;
+	  color:rgb(108,191,238);
+	  left:260px;
+	  top:305px;
+	   }
+	   
+	  #globe-label{
+	  position:fixed;
+	  font-size:30px;
+	  color:rgb(108,191,238);
+	  left:260px;
+	  top:495px;
+	   }
+
+
+
+	#small-box {
+	width:350px;
+	height:35px;
+	background:rgb(53,148,203);
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	color:white;
+	padding-top:12px;
+	text-align:center;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	
+	 }
+	
+	#small-box-content{
+	width:350px;
+	height:230px;
+	background:rgb(108,191,238);
+	position:fixed;
+	border-radius:10px;
+	left:550px;
+	top:240px;
+	display:none;
+	
+	 }
+	
+	#ok
+	{
+	color:black;
+	position:relative;
+	left:-30px;
+	top:120px;
+	 }
+	
+	#cancel
+	{
+	color:black;
+	position:relative;
+	left:190px;
+	top:120px;
+	 }
+	
+	#box-data
+	{
+	border-radius:15px;
+	width:190px;
+	height:80px;
+	position:relative;
+	top:-20px;
+	left:115px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	 }
+	
+	#box-text
+	{
+	width:90px;
+	height:25px;
+	position:relative;
+	left:15px;
+	top:-95px;
+	color:rgb(3,88,123);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	 }
+
+	#big-box {
+	width:430px;
+	height:35px;
+	background:rgb(53,148,203);
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	color:white;
+	padding-top:12px;
+	text-align:center;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	
+	 }
+	
+	#big-box-content{
+	width:430px;
+	height:530px;
+	background:rgb(108,191,238);
+	border-radius:15px;
+	position:fixed;
+	left:520px;
+	top:115px;
+	display:none;
+	
+	
+	 }
+	
+	#bigCancel
+	{
+	position:relative;
+	left:70px;
+	top:58px;
+	 }
+	
+	#bigOk
+	{
+	position:relative;
+	left:-190px;
+	top:58px;
+	 }
+	
+	#big-box-data
+	{
+	border-radius:15px;
+	width:250px;
+	height:80px;
+	position:relative;
+	top:14px;
+	left:145px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	 }
+	
+	#big-box-text
+	{
+	width:90px;
+	height:25px;
+	position:relative;
+	left:12px;
+	top:-70px;
+	color:rgb(3,88,123);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	 }
+	 
+	#checkbox-one{
+	position:relative;
+	left:10px;
+	 }
+	
+	#label-one
+	{
+	color:rgb(3,88,123);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	position:relative;
+	left:10px;
+	 }
+	
+	#checkbox-two{
+	position:relative;
+	left:10px;
+	 }
+	
+	#label-two
+	{
+	color:rgb(3,88,123);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	position:relative;
+	left:10px;
+	 }
+	 
+	#checkbox-three{
+	position:relative;
+	left:10px;
+	 }
+	 
+	 #label-three
+	{
+	color:rgb(3,88,123);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	position:relative;
+	left:10px;
+	 }
+	 
+	 #label-four
+	{
+	position:relative;
+	top:-20px;
+	left:10px;
+	color:rgb(3,88,123);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	 }
+	 
+	#checkbox-four{
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	top:-20px;
+	left:10px;
+	 }
+	
+	#big-box-text-two
+	{
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	left:15px;
+	top:9px;
+	color:rgb(3,88,123);
+	 }
+	 
+	 #big-box-text-three
+	{
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	left:15px;
+	top:9px;
+	color:rgb(3,88,123);
+	 }
+	 
+	 #big-box-text-four
+	{
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	left:15px;
+	top:9px;
+	color:rgb(3,88,123);
+	 }
+	 
+	 #big-box-text-five
+	{
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	left:15px;
+	top:9px;
+	color:rgb(3,88,123);
+	 }
+	
+	#big-box-data-two
+	{
+	width:250px;
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	left:145px;
+	top:-20px;
+	border-radius:15px;
+	 }
+	 
+	 #big-box-data-three
+	{
+	width:250px;
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	left:145px;
+	top:-20px;
+	border-radius:15px;
+	 }
+	 
+	 #big-box-data-four
+	{
+	width:250px;
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	left:145px;
+	top:-20px;
+	border-radius:15px;
+	 }
+	 
+	 #big-box-data-five
+	{
+	width:250px;
+	position:relative;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+	left:145px;
+	top:-20px;
+	border-radius:15px;
+	 }
+	 
+	 
+	  #vs-button{
+	  position:fixed;
+	  left:1475px;
+	  top:230px;
+	  display:none;
+	   }
+	   
+	 #div-mv-button{
+	 width:40px;
+	 height:40px;
+	 border-radius:30px;
+	 border:8px solid rgb(53,148,203);
+	 position:fixed;
+	 left:1473px;
+	 top:320px;
+	 display:none;
+	  }
+	   
+	   
+	  #mv-button{
+	  position:fixed;
+	  left:1485px;
+	  top:331px;
+	  display:none;
+	   }
+	   
+	 #div-xbutton2{
+	 width:40px;
+	 height:40px;
+	 border-radius:30px;
+	 border:8px solid rgb(53,148,203);
+	 position:fixed;
+	 left:1473px;
+	 top:410px;
+	 display:none;
+	  }
+	  
+	  #x-button2{
+	  position:fixed;
+	  left:1488px;
+	  top:421px;
+	  display:none;
+	   }
+	   
+	  #left-pointer{
+	  position:fixed;
+	  left:1474px;
+	  top:140px;
+	  display:none;
+	   }
+	   
+	  #right-pointer{
+	  position:fixed;
+	  left:1471px;
+	  top:140px;
+	  display:none;
+	   }
+	   
+	  #expander{
+	  display:none;
+	   }
+	   
+	  #hidden-block{
+	  position:fixed;
+	  left:1760px;
+	  top:-20px;
+	  widht:705px;
+	  height:1200px;
+	  border:1px solid gray;
+	   }
+	   
+	  #hidden-background{
+	  width:705px;
+	   }
+	   
+	  #hidden-close{
+	  position:fixed;
+	  left:1748px;
+	  top:30px;
+	  background-color:black;
+	  font-family:"Arial";
+	  color:white;
+	  text-align:center;
+	  width:25px;
+	  height:25px;
+	  border-radius:15px;
+	   }
+	   
+	  #hidden-expand{
+	  position:fixed;
+	  left:1748px;
+	  top:70px;
+	  background-color:black;
+	  font-family:"Arial";
+	  color:white;
+	  text-align:center;
+	  width:25px;
+	  height:25px;
+	  border-radius:15px;
+	   }
+	   
+	  #expand{
+	  position:fixed;
+	  left:1753px;
+	  top:74px;
+	  color:white;
+	   }
+	   
+	  #shrink{
+	  position:fixed;
+	  left:253px;
+	  top:74px;
+	  color:white;
+	   }
+	  
+	  #download{
+	  position:fixed;
+	  left:2250px;
+	  top:30px;
+	  color:white;
+	  padding-top:5px;
+	  padding-right:4px;
+	  text-align:right;
+	  width:100px;
+	  height:30px;
+	  background-color:rgb(53,148,203);
+	   }
+	   
+	  #downloadb{
+	  position:fixed;
+	  left:2260px;
+	  top:38px;
+	  color:white;
+	   }
+	   
+	  #web-preview{
+	  position:fixed;
+	  left:2380px;
+	  top:30px;
+	  color:white;
+	  padding-top:5px;
+	  padding-right:4px;
+	  text-align:right;
+	  width:120px;
+	  height:30px;
+	  background-color:rgb(53,148,203);
+	   }
+	   
+	  #web-previewb{
+	  position:fixed;
+	  left:2390px;
+	  top:38px;
+	  color:white;
+	   }
+	   
+	  #hidden-left-pointer{
+	  width:20px;
+	  height:1200px;
+	  background:transparent;
+	  position:fixed;
+	  left:1790px;
+	  top:80px;
+	   }
+	   
+	  #hidden-left-pointer:hover{
+	  background:gray;
+	   }
+	   
+	  #mini-left-pointer{
+	  position:fixed;
+	  left:1794px;
+	  top:150px;
+	  color:white;
+	   }
+	   
+	  #hidden-right-pointer{
+	  width:20px;
+	  height:1200px;
+	  background:transparent;
+	  position:fixed;
+	  left:2490px;
+	  top:80px;
+	   }
+	   
+	  #hidden-right-pointer:hover{
+	  background:gray;
+	   }
+	   
+	  #mini-right-pointer{
+	  position:fixed;
+	  left:2484px;
+	  top:150px;
+	  color:white;
+	   }
+	   	   
+	  #div-insurance-dokument{
+	  position:fixed;
+	  left:1810px;
+	  width:690px;
+	  height:730px;
+	  top:80px;
+	  overflow-y:auto;
+	   }
+	   
+	  #insurance-dokument{
+	  width:690px;
+	   }
+	   
+	  #div-other-insurance-dokument{
+	  position:fixed;
+	  left:1810px;
+	  width:690px;
+	  height:730px;
+	  top:80px;
+	  overflow-y:auto;
+	   }
+	   
+	  #div-insurance-policy{
+	  position:fixed;
+	  left:1810px;
+	  width:690px;
+	  height:730px;
+	  top:80px;
+	  overflow-y:auto;
+	   }
+	
+    <!--
+    body {
+      color:#000000;
+      background-color:#FFFFFF;
+	  overflow-x:hidden;
+	  overflow-y:hidden;
+    }
+    a  { color:#0000FF; }
+    a:visited { color:#800080; }
+    a:hover { color:#008000; }
+    a:active { color:#FF0000; }
+    -->
+    </style>
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  
+ 
+  
+  <img src="./pictures/RVLogo.png" alt="RVLogo" width="120px" height="50px" id="logo">
+  
+  <div id="left-div">
+  	<i class="fa fa-check-circle-o fa-4x" id="vs-button" style="color:rgb(53,148,203)"></i>
+   <div id="div-mv-button">
+   <i class="fa fa-exchange fa-2x" id="mv-button" style="color:rgb(53,148,203)"></i>
+   </div>
+   <div id="div-xbutton2">
+   <i class="fa fa-trash-o fa-2x" id="x-button2" style="color:rgb(53,148,203)"></i>
+   </div>
+   <i class="fa fa-arrow-circle-o-left fa-4x" id="left-pointer" style="color:rgb(53,148,203)"></i>
+  	   <div id="small-left-div">
+	   		<div id="x-button" onClick="history.go()">
+			<i class="fa fa-refresh" style="color:rgb(108,191,238)"></i>
+			</div>
+	   </div>
+  </div>
+  
+  </head>
+  
+  
+  
+  <body>
+  
+  <h1 style="display:none">Tribefire Host JQuery Rest Client API</h1>
+<br/>
+<p style="display:none">version : <span id="version"> </span> </p>
+<p style="display:none">baseUrl : <span id="baseUrl"> </span> </p>
+<p style="display:none">sessionId : <span id="sessionId">please wait....</span> </p>
+<p style="display:none">selectedVorgang key : <span id="selectedVorgangKey">none....</span> </p>
+<br/>
+
+<div id="entityLoads">
+<p style="display:none">Vergang : <span id="countVorgang">please wait....</span> </p>
+  
+
+  <div id="minor-div-one"></div>
+  <img src="./pictures/monitor.png" id="monitor">
+  <img src="./pictures/mail.png" id="mail">
+  <img src="./pictures/globe.png" id="globe">
+	<div id="minor-div-two"></div>
+	<label for="monitor" id="monitor-label">[XV12345]OB:B78007609060</label>
+	<label for="mail" id="mail-label">Dokumente zum Vorgang</label>
+	<label for="globe" id="globe-label">Versandeinheit zum Vorgang</label>
+  
+    <table id="tableVorgang">
+  <thead>
+  <th scope="col" class="vorgangHeader">Bezeichnung</th>
+            <th scope="col" class="rounded-q1">Erstellt von</th>
+            <th scope="col" class="rounded-q2">Erstellt am</th>
+            <th scope="col" class="rounded-q3">Geändert von</th>
+            <th scope="col" class="rounded-q4">Geändert am</th>
+			<th scope="col" class="rounded-q5">Status</th>
+  </thead>
+	<tbody id="vorgangBody">
+	
+	</tbody>
+</table>
+
+<br/>
+<table id="tableDokumentum">
+<thead>
+    	<tr>
+        	<th scope="col" class="document-q1">Bezeichnung</th>
+            <th scope="col" class="document-q2">Erstellt von</th>
+            <th scope="col" class="document-q3">Erstellt am</th>
+            <th scope="col" class="document-q4">Geändert von/am</th>
+            <th scope="col" class="document-q5">Freigegeben von/am</th>
+			<th scope="col" class="document-q6">Status</th>
+        </tr>
+    </thead>
+	<tbody id="dokumBody">
+		   <tr>
+		   	   <td></td>
+			   <td></td>
+			   <td></td>
+			   <td></td>
+			   <td></td>
+			   <td></td>
+		  </tr>
+	</tbody>
+</table>
+
+<br/>
+<table id="tableVersandeinheit">
+    <thead>
+    	<tr>
+        	<th scope="col" class="process-q1">Empfanger-Daten</th>
+            <th scope="col" class="process-q2">Status</th>
+            <th scope="col" class="process-q3">Druckziel</th>
+            <th scope="col" class="process-q4">Verarbeitungs-Datum</th>
+            <th scope="col" class="process-q5">Rolle</th>
+			<th scope="col" class="process-q6">Ausfertgungen</th>
+        </tr>
+    </thead>
+	<tbody id="versanBody">
+		   <tr>
+		   	   <td></td>
+			   <td></td>
+			   <td></td>
+			   <td></td>
+			   <td></td>
+			   <td></td>
+		  </tr>
+	</tbody>
+</table>
+
+</div>
+
+  <div id="small-box-content">
+  	   <div id="small-box">
+	   		   Vorgang abgeschlossen-fehlerhaft setzen
+	   </div>
+  <img src="./pictures/Cancel.png" id="cancel">
+  <img src="./pictures/Ok.png" id="ok">
+  <input type="text" name="data" id="box-data"></input>
+  		 <div id="box-text">Kommentar:</div>
+  </div>
+
+    <div id="big-box-content">
+  	   <div id="big-box">
+	   		   Zweiterstellung mit Versandsänderung
+	   </div>
+
+
+  <input type="text" name="bigData" id="big-box-data"></input>
+  		 <div id="big-box-text">Kommentar:</div>
+	<input type="checkbox" id="checkbox-one">
+	<label for="checkbox-one" id="label-one">Faxversand</label><br>
+	<div id="big-box-text-two">FAXNR:</div>
+	<input type="text" id="big-box-data-two"></input><br>
+	<input type="checkbox" id="checkbox-two"></input>
+	<label for="checkbox-two" id=label-two>Dezentraler Versand</label>
+	<div id="big-box-text-three">DRUCKER_USER:</div>
+	<input type="text" id="big-box-data-three"></input>
+	<div id="big-box-text-four">DRUCKER:</div>
+	<input type="text" id="big-box-data-four"></input><br>
+	<input type="checkbox" id="checkbox-three"></input>
+	<label for="checkbox-three" id="label-three">Interner Versand</label>
+	<div id="big-box-text-five">ORGA_SYMBOL:</div>
+	<input type="text" id="big-box-data-five"></input><br>
+	<input type="checkbox" id="checkbox-four"></input>
+	<label for="checkbox-four" id="label-four">Zentraler Versand</input>
+	<img src="./pictures/Cancel.png" id="bigCancel">
+  	<img src="./pictures/Ok.png" id="bigOk">
+  </div>
+  
+  
+  <div id="minor-div-three">
+  
+  </div>
+  
+  
+  <div id="hidden-block" style="background-color:white">
+  
+  	   <div id="hidden-close">
+	   <i class="fa fa-times" style="color:white"></i>
+	   </div>
+	   <div id="hidden-expand">
+	   <i class="fa fa-arrows-alt" id="expand"></i>
+	   </div>
+	   
+	   <div id="download">Download
+	   <i class="fa fa-arrow-circle-o-down" id="downloadb"></i>
+	   </div>
+	   <div id="web-preview">Web Preview
+	   <i class="fa fa-caret-square-o-right" id="web-previewb"></i>
+	   </div>
+  
+  	   <div id="hidden-left-pointer">
+	   <i class="fa fa-arrow-circle-left" id="mini-left-pointer"></i>
+	   </div>
+	   
+	     <img src="./pictures/background.png" id="hidden-background">
+		 
+		 <div id="div-other-insurance-dokument">
+	     <img id="image">
+		 </div>
+		 
+		 
+	   <div id="hidden-right-pointer">
+	   <i class="fa fa-arrow-circle-right" id="mini-right-pointer"></i>
+	   </div>
+  
+  </div>
+  
+   <i class="fa fa-arrows-alt" id="shrink" style="display:none"></i>
+   <p class="imgId" style="display:none"></p>
+   
+  </body>
+
+
+</html>
