@@ -1,20 +1,13 @@
-A First Level Header
+JQueryPlayground
 ====================
 
-A Second Level Header
+A misnomer
 ---------------------
 
-Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.
+actually this a beginner level laboratory for Frontend techniques
 
-The quick brown fox jumped over the lazy
-dog's back.
+### Technologies
 
-### Header 3
+> The evolution of playground equipment has been to this ever safer, less challenging, less interesting assemblies of equipment.
 
-> This is a blockquote.
-> 
-> This is the second paragraph in the blockquote.
->
-> ## This is an H2 in a blockquote
+> Gever Tulley 
